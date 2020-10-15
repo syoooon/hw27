@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter#1</title>
+
+	<style type="text/css">
+		html{cursor:url(cu1.cur), default;}
+		body{background-color: #151414; margin-top: 0px; margin-left: 0px;}
+		#ho1:hover{ cursor: url(cu2.cur), pointer;}
+		#ho2:hover{ cursor: url(cu2.cur), pointer;}
+		#ho3:hover{ cursor: url(cu2.cur), pointer;}
+		#ho4:hover{ cursor: url(cu2.cur), pointer;}
+		#newspaper:hover{ cursor: url(cu2.cur), pointer;}
+		#nextt{ opacity: 0.4;}
+		#nextt:hover{opacity: 1;}
+
+
+
+
+
+		body { 
+		    animation: fadeInAnimation ease 3s; 
+		    animation-iteration-count: 1; 
+		    animation-fill-mode: forwards; 
+		} 
+		  
+		@keyframes fadeInAnimation { 
+		    0% { 
+		        opacity: 0; 
+		    } 
+		    100% { 
+		        opacity: 1; 
+		     } 
+		} 
+	</style>
+</head>
+<body>
+
+	<div id="main01">
+		<img src="mainback01.png" id="back" 
+		style="display: block;margin: auto;   
+				position: absolute; width:100% ; height: 100%; opacity: 1;">
+	</div>
+	
+	<div id="ho1">
+		<img src="02.png" id="ticket" 
+		style="position: fixed; display: block; margin: auto; z-index: 4;
+		top: 69%; left: 42%; opacity: 0; width: 23%; height: 15%;">
+		
+	</div>
+		<div id="ho2">
+		<a href="news1.html">
+		<img src="01.png" id="newspaper" 
+		style="position: fixed; display: block; margin: auto; z-index: 3;
+		top: 20%; left: 42%; opacity: 0; width: 60%; height: 50%;">
+		</a>
+	</div>
+		<div id="ho3">
+		<img src="03.png" id="diary" 
+		style="position: fixed; display: block; margin: auto; z-index: 2;
+		top: 46%; left: 0%; opacity: 0; width: 40%; height: 40%;">
+	</div>
+		<div id="ho4">
+		<img src="04.png" id="ma" 
+		style="position: fixed; display: block; margin: auto; z-index: 2;
+		top: 28%; left: 21%; opacity: 0; width: 22%; height: 22%;">
+	</div>
+	<div>
+		<img src="howto.png" id="how" 
+		style="position: absolute;display: block; margin: auto; z-index: 10; width: 100%; height: 100%;">
+	</div>
+	<div id="hidden">
+		<img src="ticket.png" id="ticket2"
+		style="position: absolute; display: block; margin: auto; top: 0px; width: 0px; left: 22%; opacity: 0; z-index: 4;">
+		<img src="diary01.png" id="diary2"
+		style="position: absolute; display: block; margin: auto; top: 60px; width: 0px; left: 32%; opacity: 0; z-index: 3;">
+		<img src="ma.png" id="ma2"
+		style="position: absolute; display: block; margin: auto; top: 130px; width: 0px; left: 32%; opacity: 0.5; z-index: 2;">
+	</div>
+			
+		
+
+	<script type="text/javascript">
+
+			how.onclick = function(){
+				how.style.width = 0;
+				how.style.opacity = 0;
+
+			}
+
+
+			var m_state = "on"
+			ma.onclick = function(){
+			if (m_state == "on") {
+				
+				ma2.style.width = "675px";
+				ma2.style.opacity = "1";
+				
+				diary2.style.opacity = "0";
+				ticket2.style.opacity = "0";
+				back.style.opacity = "0.4"; 
+				m_state = "off";}
+				
+				ma2.onclick = function(){
+				
+				if (m_state == "off") {
+						ma2.style.width = "0px";
+						ma2.style.opacity = "0";
+
+					back.style.opacity = "1"; 
+					m_state = "on";	}
+			}
+
+
+			}
+			var d_state = "on"
+			diary.onclick = function(){
+
+			if (d_state == "on") {
+				
+				diary2.style.width = "620px";
+				diary2.style.opacity = "1";
+				ticket2.style.opacity = "0";
+				back.style.opacity = "0.4"; 
+				d_state = "off";}
+				diary2.onclick = function(){
+				
+				if (d_state == "off") {
+						diary2.style.width = "0px";
+						diary2.style.opacity = "0";
+						
+						ticket2.style.opacity = "0";
+					back.style.opacity = "1"; 
+					d_state = "on";	}
+			}
+			
+			}
+			var t_state = "on"
+			ticket.onclick = function(){
+
+			if (t_state == "on") {
+				ticket2.style.width = "982px";
+				ticket2.style.top = "200px";
+				ticket2.style.opacity = "1";
+				back.style.opacity = "0.4"; 
+				t_state = "off";}
+				ticket2.onclick = function(){
+				
+				if (t_state == "off") {
+					ticket2.style.width = "0px";
+						ticket2.style.top = "0px";
+						ticket2.style.opacity = "0";
+					back.style.opacity = "1"; 
+					t_state = "on";	}
+			}
+			
+			}
+
+			newspaper.onclick = function(){
+
+
+			}
+			
+
+
+
+	</script>
+</body>
+</html>

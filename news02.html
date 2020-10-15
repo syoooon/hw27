@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NEWS</title>
+	<style type="text/css">
+		html{cursor:url(cu1.cur), auto;}
+		body{background-image: url("wood.png");
+			}
+			#nextt{ opacity: 0.4;}
+		#nextt:hover{opacity: 1;}
+		#undoo{ opacity: 0.4;}
+		#undoo:hover{opacity: 1;}
+		#nextt { 
+		    animation: hvr-wobble-vertical 1.2s;
+			animation-iteration-count: infinite;
+		} 
+		  
+		@keyframes hvr-wobble-vertical {
+		  16.65% {
+		    -webkit-transform: translateY(8px);
+		    transform: translateY(8px);
+		  }
+		  33.3% {
+		    -webkit-transform: translateY(-6px);
+		    transform: translateY(-6px);
+		  }
+		  49.95% {
+		    -webkit-transform: translateY(4px);
+		    transform: translateY(4px);
+		  }
+		  66.6% {
+		    -webkit-transform: translateY(-2px);
+		    transform: translateY(-2px);
+		  }
+		  83.25% {
+		    -webkit-transform: translateY(1px);
+		    transform: translateY(1px);
+		  }
+		  100% {
+		    -webkit-transform: translateY(0);
+		    transform: translateY(0);
+		  }
+		}
+			.hvr-wobble-vertical {
+  		display: inline-block;
+		 	 vertical-align: middle;
+		  -webkit-transform: perspective(1px) translateZ(0);
+		  transform: perspective(1px) translateZ(0);
+		  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+		}
+		.hvr-wobble-vertical {
+		  -webkit-animation-name: hvr-wobble-vertical;
+		  animation-name: hvr-wobble-vertical;
+		  -webkit-animation-duration: 1s;
+		  animation-duration: 1s;
+		  -webkit-animation-timing-function: ease-in-out;
+		  animation-timing-function: ease-in-out;
+		  -webkit-animation-iteration-count: infinite;
+		  animation-iteration-count: infinite;
+		}
+			
+	</style>
+</head>
+<body>
+	<div id="news01">
+		
+		<img src="news04_.png" id="first" 
+		style="display: block; position: relative; margin: auto; width: 60%; z-index: 10;top: 10%;
+  ;">
+		<img src="news05_.png" id="sec" 
+		style="display: block; margin: auto; width: 60%; position: relative; z-index: 8;">
+		</div>
+		<img src="news06_.png" id="third" 
+		style="display: block; margin: auto; width: 60%; position: relative; z-index: 6;">
+		</div>
+
+		<div>
+		
+		<a href="main3.html">
+			<img src="next.png" id="nextt" 
+		style="position: fixed; display: block; margin: auto; width: 7%; height: 3.5%;
+				top: calc(50% + 400px); left: 90%;">
+			</a>
+			<a href="main2.html">
+			<img src="undo.png" id="undoo" 
+		style="position: fixed; display: block; margin: auto; width: 6%; height: 3%;
+				top: calc(50% + 400px); left: 3%;">
+			</a>
+	</div>
+		
+
+
+
+
+<audio id="mysound" loop="">
+ 	<source src="sound.wav" type="audio/mpeg">
+	</audio>
+
+	</div>
+	<script type="text/javascript">
+		first.onclick = function(){
+			first.style.opacity = "0";
+			first.style.width = "0";
+			mysound.loop = false;
+			mysound.play();
+		}
+		sec.onclick = function(){
+			sec.style.opacity = "0";
+			sec.style.width = "0";
+			mysound.loop = false;
+			mysound.play();
+		}
+		third.onclick = function(){
+			third.style.opacity = "0";
+			third.style.width = "0";
+			nextt.style.opacity = "0.7";
+			mysound.loop = false;
+			mysound.play();
+		}
+	</script>
+</body>
+</html>

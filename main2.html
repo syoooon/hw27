@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter#2</title>
+	<style type="text/css">
+		html{cursor:url(cu1.cur), default;}
+		body{background-color: #151414; margin-top: 0px; margin-left: 0px;}
+		#nextt{ opacity: 0.4;}
+		#nextt:hover{opacity: 1;}
+		#undoo{ opacity: 0.4;}
+		#undoo:hover{opacity: 1;}
+		#da:hover{ cursor: url(cu2.cur), pointer;}
+		#news:hover{ cursor: url(cu2.cur), pointer;}
+
+
+
+
+
+		body { 
+		    animation: fadeInAnimation ease 3s; 
+		    animation-iteration-count: 1; 
+		    animation-fill-mode: forwards; 
+		} 
+		  
+		@keyframes fadeInAnimation { 
+		    0% { 
+		        opacity: 0; 
+		    } 
+		    100% { 
+		        opacity: 1; 
+		     } 
+		} 
+	</style>
+</head>
+<body>
+
+
+
+	<div id="main02">
+		<img src="mainback02_1.png" id="back" 
+		style="display: block;margin: auto;   
+				position: absolute; width:100% ; height: 100%; opacity: 1;">
+	</div>
+	<div id="ne">
+		<a href="news02.html">
+		<div id="news" style="background-color: black; width: 750px; height: 500px; position: absolute; left: 0%; top: 38%; opacity: 0;"></div>
+		</a>
+	</div>
+	<div id="da" style="background-color: black; width: 550px; height: 400px; position: absolute; left: 69%; top: 30%; opacity: 0;"></div>
+	<div id="hidden">
+		<img src="diary02.png" id="paper"
+		style="position: absolute;display: block; margin: auto; top: 60px; width: 0px; left: 32%; opacity: 0; z-index: 3;">
+	</div>
+
+
+
+
+
+	<div>
+		
+		
+			<a href="main.html">
+			<img src="undo.png" id="undoo" 
+		style="position: absolute; display: block; margin: auto; width: 6%; height: 3%;
+				top: calc(50% + 400px); left: 3%;">
+			</a>
+	</div>
+
+	<script type="text/javascript">
+		var d_state = "on"
+			da.onclick = function(){
+
+			if (d_state == "on") {
+				
+				paper.style.width = "620px";
+				paper.style.opacity = "1";
+				
+				back.style.opacity = "0.4"; 
+				d_state = "off";}
+				paper.onclick = function(){
+				
+				if (d_state == "off") {
+						paper.style.width = "0px";
+						paper.style.opacity = "0";
+						
+						
+					back.style.opacity = "1"; 
+					d_state = "on";	}
+			}
+		}
+	</script>
+</body>
+</html>
